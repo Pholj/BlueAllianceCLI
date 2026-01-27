@@ -5,7 +5,8 @@ def get_554_history_events():
     data = get_data_from_api(endpoint)
     event_list = []
     for events in data:
-        event_list.append(events["name"])
+        event_list.append([events["name"],
+                           events["start_date"]])
     return event_list
 
 
