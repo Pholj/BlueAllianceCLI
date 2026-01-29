@@ -11,8 +11,6 @@ Utilities:
 
 
 To install Python libraries, run
-
-'''pip install -r requirements.txt'''
-
+`pip install -r requirements.txt`
 
 Ugh... I'm gonna be so free on February 14th....anynyan~!
