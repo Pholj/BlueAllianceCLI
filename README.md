@@ -3,17 +3,18 @@
 
 To be used for scouting in FRC.
 Currently planning on creating it as a CLI tool. 
-Utilities:
+
+**Utilities:**
 - Get a team's history
 - Compare your alliance vs enemy alliance (Score average, RP average, etc.)
 - Get a team's stats (Score, RP, experience, etc.)
 
-Set Up:
+**Set Up:**
 Create a .env file in the main directory
 Place your APIKEY in there as a variable named API_BLUE
 (When setting the key variable, don't use quotation marks around the apikey)
 
-How to Use:
+**How to Use:**
 I will add instructions here later for the commands but you can use `-h`
 
 To install Python libraries, run
