@@ -6,6 +6,7 @@ parser = argparse.ArgumentParser(
 
 parser.add_argument(
         "--command",
+        choices=["team_history", "match_results", "head_to_head"],
         type=str,
         help='''command to execute:\n
                 "team_history" - Get event history for a team\n
