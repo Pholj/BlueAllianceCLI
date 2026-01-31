@@ -1,47 +1,30 @@
 import argparse
 
+
+#Parser structure: main.py category(team) action action-related-info
 parser = argparse.ArgumentParser(
         description="FRC Blue Alliance data fetcher"
 )
 
-parser.add_argument(
-        "--command",
-        choices=["team_history", "match_results", "head_to_head"],
-        type=str,
-        help='''I'll probably include this in the README so its not so bad...
-        
-        command to execute:\n
-                "team_history" - Get event history for a team\n
-                "match_results" - Get match results for an event\n
-                "head_to_head" - Compare two teams at an event'''
+sub_parser = parser.add_subparsers(
+        dest="category",
+        required=True
+)
+#This sub_parser is the first positional argument after main.py ___ ___
+team_parser = sub_parser.add_parser("team")
+
+#Apart of the team-category, move this into a team file later?
+team_subparsers = team_parser.add_subparsers(
+    dest="action", 
+    required=True)
+
+team_info_parser = team_subparsers.add_parser(
+    "info",
+    help="Show basic team information"
 )
 
-parser.add_argument(
-        "--team",
-        type=int,
-        help="your FRC team number"
-)
-
-parser.add_argument(
-        "--opp",
-        type=int,
-        help="enemy FRC team number"
-)
-
-parser.add_argument(
-        "--event",
-        type=str,
-        help="FRC event code"
-)
-
-parser.add_argument(
-        "--year",
-        type=int,
-        help="FRC season year"
-)
-
-parser.add_argument(
-        "--match",
-        type=str,
-        help="FRC match code"
+team_info_parser.add_argument(
+    "team",
+    type=int,
+    help="FRC team number"
 )

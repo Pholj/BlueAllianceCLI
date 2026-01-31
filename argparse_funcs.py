@@ -1,14 +1,9 @@
 from api_commands import get_data_from_api
 
-def team_history(args):
-    endpoint = f"team/frc{args.team}/events"
+def team_info(args):
+    #getting basic info
+    endpoint = f"/team/frc{args.team}"
     data = get_data_from_api(endpoint)
-    event_list = []
-    for events in data:
-        event_list.append([events["name"],
-                           events["start_date"]])
-    return event_list
-
-
-def match_results(args):
-    endpoint = f"event/{args.event}/matches"
+    print(data["nickname"] , ":", data["team_number"])
+    print(data["school_name"], ":", data["city"])
+    print(data["rookie_year"])

@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 def get_data_from_api(endpoint):
     load_dotenv() # take environment variables from .env
-    baseURL = "https://www.thebluealliance.com/api/v3/"
+    baseURL = "https://www.thebluealliance.com/api/v3"
     API_KEY = os.getenv("API_BLUE")
     headers = {
         'X-TBA-Auth-Key': API_KEY
