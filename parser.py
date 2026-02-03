@@ -26,5 +26,19 @@ team_info_parser = team_subparsers.add_parser(
 team_info_parser.add_argument(
     "team",
     type=int,
-    help="FRC team number"
+    nargs="?",
+    default=554,
+    help="FRC team number (Defaults to 554)"
+)
+
+team_avgscore_parser = team_parser.add_parser(
+    "avg",
+    help="Gives you average shooting and score info"
+)
+
+team_info_parser.add_argument(
+    "event",
+    type=str,
+    nargs="?",
+    default="2026ohmv"
 )
