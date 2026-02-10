@@ -1,5 +1,5 @@
 # BlueAllianceCLI
-##ITS A WIP
+##ITS A WIP THATS NEVER BEING FINISHED WE MOVED ON TO THE GUI TRUE STORY!
 
 To be used for scouting in FRC.
 Currently planning on creating it as a CLI tool. 
